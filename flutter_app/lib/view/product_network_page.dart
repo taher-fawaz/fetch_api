@@ -11,7 +11,7 @@ class ProductNetworkPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         body: FutureBuilder<List<Product>>(
-          future: ProductsApi.getUsers(),
+          future: ProductsApi.getProducts(),
           builder: (context, snapshot) {
             final products = snapshot.data;
 
