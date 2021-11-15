@@ -4,10 +4,10 @@ import 'package:flutter_app/provider/cart.dart';
 import 'package:provider/provider.dart';
 
 class ProductPage extends StatelessWidget {
-  final Product user;
+  final Product product;
 
   const ProductPage(
-    this.user, {
+    this.product, {
     Key? key,
   }) : super(key: key);
 
@@ -16,7 +16,7 @@ class ProductPage extends StatelessWidget {
     final product = Provider.of<Product>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text(user.title!),
+        title: Text(product.title!),
       ),
       body: Center(
         child: Column(
@@ -24,7 +24,7 @@ class ProductPage extends StatelessWidget {
           children: <Widget>[
             const SizedBox(height: 40),
             Text(
-              user.content!,
+              product.content!,
               style: const TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,

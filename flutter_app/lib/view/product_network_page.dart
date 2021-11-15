@@ -40,9 +40,6 @@ class ProductNetworkPage extends StatelessWidget {
           onTap: () => Navigator.of(context).push(MaterialPageRoute(
             builder: (BuildContext context) => ProductPage(product),
           )),
-          // leading: CircleAvatar(
-          //   backgroundImage: NetworkImage(user.urlAvatar),
-          // ),
           title: Text(product.title!),
           subtitle: Text(product.content!),
           leading: Container(
